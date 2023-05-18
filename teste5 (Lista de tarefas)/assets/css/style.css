@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+:root {
+    --primary-color: rgb(13, 106, 134);
+    --primary-color-darker: rgb(9, 48, 56);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-color);
+    font-family: 'Open sans', sans-serif;
+    font-size: 1.3em;
+    line-height: 1.5em;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 2em;
+}
+
+.input-tarefa{
+    height: 35px;
+    width: 250px;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    margin: 0px 5px;
+    padding: 5px;
+}
+
+.btn-tarefa {
+    margin: 0px 5px;
+    height: 35px;
+    width: 120px;
+    border-radius: 10px;
+    border: none;
+}
+
+.container {
+    max-width: 650px;
+    margin: 50px auto;
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.navgation {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    height: 50px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 10px;
+}
+
+.remover {
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    border: 2px solid white;
+    width: 80px;
+}
+.remover:hover {
+    border: 2px solid lightslategray;
+    transition: .5s;
+}
+
+
+@media screen and (max-width: 700px) {
+    .remover {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
+

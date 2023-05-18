@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <section class="container">
+        <h1>Formulário de cadastro</h1>
+        <ul class="instrucoes">
+            <li>Nenhum campo pode estar vazio</li>
+            <li>Usuário só poderá conter letras e/ou números</li>
+            <li>Usuário deverá ter entre 3 e 12 caracteres</li>
+            <li>Senha precisa ter entre 6 e 12 caracteres</li>
+        </ul>
+        <form action="#" method="post" onsubmit="return false">
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome">
+            <p class="erroMsg" id="nomeErro"></p>
+
+            <label for="sobrenome">Sobrenome:</label>
+            <input type="text" name="sobrenome" id="sobrenome">
+            <p class="erroMsg" id="sobrenomeErro"></p>
+
+            <label for="cpf">CPF:</label>
+            <input type="number" name="cpf" id="cpf">
+            <p class="erroMsg" id="cpfErro"></p>
+
+            <label for="usuario">Usuário:</label>
+            <input type="text" name="usuario" id="usuario">
+            <p class="erroMsg" id="usuarioErro"></p>
+
+            <label for="senha">Senha:</label>
+            <input type="text" name="senha" id="senha">
+            <p class="erroMsg" id="senhaErro"></p>
+
+            <label for="repetirSenha">Repetir senha:</label>
+            <input type="text" name="repetirSenha" id="repetirSenha">
+            <p class="erroMsg" id="repetirSenhaErro"></p>
+
+            <input type="submit" value="Enviar" class="enviarBtn" id="enviarBtn">
+        </form>
+
+    </section>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

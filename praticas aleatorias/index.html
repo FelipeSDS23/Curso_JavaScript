@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML</title>
+</head>
+
+<body>
+    <div>
+        <label for="cep">CEP</label>
+        <input type="number" name="cep" id="cep">
+        <button id="sendBtn">Verificar</button>
+    </div>
+    <div>
+        <p id="info"></p>
+        <br>
+        <p>Rua: <span id="rua"></span></p>
+        <p>Bairro: <span id="bairro"></span></p>
+        <p>Cidade: <span id="cidade"></span></p>
+        <p>Estado: <span id="estado"></span></p>
+    </div>
+
+    <script>
+        const cep = document.querySelector("#cep");
+        const sendBtn = document.querySelector("#sendBtn");
+        const infoMsg = document.querySelector("#info");
+        const rua = document.querySelector("#rua");
+        const bairro = document.querySelector("#bairro");
+        const cidade = document.querySelector("#cidade");
+        const estado = document.querySelector("#estado");
+
+
+        sendBtn.addEventListener("click", () => {
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", `http://viacep.com.br/ws/${cep.value}/json/`);
+            xhr.send(null);
+            xhr.onreadystatechange = verificaAjax;
+
+            function verificaAjax() {
+                const json = JSON.parse(xhr.responseText);
+                console.log(json);
+                infoMsg.innerText = `Você pesquisou o CEP ${json.cep}.`
+                rua.innerText = json.logradouro;
+                bairro.innerText = json.bairro;
+                cidade.innerText = json.localidade;
+                estado.innerText = json.uf;
+            }
+
+            /*
+            console.log(xhr.readyState);
+            console.log(xhr.status);
+            console.log(xhr.response);
+            console.log(xhr.responseText);
+            */
+        })
+    </script>
+</body>
+
+</html>

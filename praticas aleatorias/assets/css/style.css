@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+:root {
+    --primary-color: rgb(13, 106, 134);
+    --primary-color-darker: rgb(9, 48, 56);
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary-color);
+}
+
+h1 {
+    font-size: 2em;
+    padding: 10px;
+    color: white;
+}
+
+.textArea {
+    display: flex;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+}
+
+.paragraph {
+    font-size: 1.8em;
+    margin: 10px;
+}
+
+.submitBtn {
+    width: 150px;
+    height: 30px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.inputs {
+    width: 250px;
+    height: 30px;
+}
+
+.listaContainer {
+    background-color: white;
+    padding: 30px;
+}
+
+.table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 600px;
+    font-size: 1.1em;
+}
+
+.table > tr, th, td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 20px;
+}
+
+.card {
+
+    height: 200px;
+    background-color: white;
+}
